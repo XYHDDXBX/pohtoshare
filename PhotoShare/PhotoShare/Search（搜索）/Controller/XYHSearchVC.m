@@ -101,10 +101,11 @@ static NSString *searchID = @"search";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self.searchBar resignFirstResponder];
-    
+    if (searchstatus == false) {
         XYHheadView *view = (XYHheadView *)self.tableview.tableHeaderView;
         view.headLabel.text = @"历史记录";
         [view.headbtn setImage:[UIImage imageNamed:@"search-3"] forState:UIControlStateNormal];
+    }
         self.tableview.tableFooterView.hidden = YES;
         self.tableview.tableHeaderView.hidden = NO;
 }
@@ -165,7 +166,17 @@ static NSString *searchID = @"search";
     XYHsearchCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     XYHPhotoDeatilVC *detailVC = [[XYHPhotoDeatilVC alloc] init];
     detailVC.detailModel = cell.model;
-    [self.historyArray addObject:cell.model];
+    
+    if (self.historyArray.count) {
+        for (photolistModel *model in self.historyArray) {
+            if ([model.title isEqualToString:cell.model.title]){
+            }else {
+                [self.historyArray addObject:cell.model];
+            }
+        }
+    }else{
+        [self.historyArray addObject:cell.model];
+    }
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

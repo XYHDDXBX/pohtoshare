@@ -23,6 +23,7 @@
 		DF18F77D240901ED009112E7 /* XYHEdictVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F77B240901ED009112E7 /* XYHEdictVC.xib */; };
 		DF2021B023FD1EC200EDFD16 /* photolistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021AF23FD1EC200EDFD16 /* photolistModel.m */; };
 		DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */; };
+		DF2E1A49240B9DFA00A4ACD9 /* XYHProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */; };
 		DF4EB3EC24013710008CAD75 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB3EB24013710008CAD75 /* Reachability.m */; };
 		DF4EB3EF24014E71008CAD75 /* XYHRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB3EE24014E71008CAD75 /* XYHRefresh.m */; };
 		DF4EB3F124014E80008CAD75 /* XYHRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4EB3F024014E80008CAD75 /* XYHRefresh.xib */; };
@@ -80,6 +81,7 @@
 		DF2021AF23FD1EC200EDFD16 /* photolistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photolistModel.m; sourceTree = "<group>"; };
 		DF2021B223FD214B00EDFD16 /* XYHHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHHttpTool.h; sourceTree = "<group>"; };
 		DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHHttpTool.m; sourceTree = "<group>"; };
+		DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHProfileVC.xib; sourceTree = "<group>"; };
 		DF4EB3EA24013710008CAD75 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DF4EB3EB24013710008CAD75 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DF4EB3ED24014E71008CAD75 /* XYHRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHRefresh.h; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			children = (
 				DFCD425F23D0B7F5006BB290 /* XYHProfileVC.h */,
 				DFCD426023D0B7F5006BB290 /* XYHProfileVC.m */,
+				DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				DF18F77D240901ED009112E7 /* XYHEdictVC.xib in Resources */,
 				DF18F7572406A967009112E7 /* XYHsearchCell.xib in Resources */,
 				DF18F7762408E68C009112E7 /* XYHPhotoVC.xib in Resources */,
+				DF2E1A49240B9DFA00A4ACD9 /* XYHProfileVC.xib in Resources */,
 				DF18F7522406A659009112E7 /* XYHheadView.xib in Resources */,
 				DF18F76E240758C6009112E7 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				DF4EB40524021780008CAD75 /* XYHpopMenumVC.xib in Resources */,
