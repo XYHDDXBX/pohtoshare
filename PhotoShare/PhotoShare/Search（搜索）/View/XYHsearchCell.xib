@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="XYHsearchCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rji-1E-5TW">
+                        <rect key="frame" x="55" y="39" width="265" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="MoJ-FR-zFS"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3Q-IN-CuL">
+                        <rect key="frame" x="26" y="18" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="A6h-KS-beU"/>
+                            <constraint firstAttribute="height" constant="22" id="T9C-cG-5R4"/>
+                        </constraints>
+                        <state key="normal" image="search-2"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nII-Rd-OxV">
+                        <rect key="frame" x="296" y="15" width="8" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="DkD-Gs-LmO"/>
+                            <constraint firstAttribute="width" constant="8" id="na6-A6-56s"/>
+                        </constraints>
+                        <state key="normal" image="searchbtn-2"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="九寨沟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-fc-hGE">
+                        <rect key="frame" x="73" y="18" width="40" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="19R-ga-kOh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四川省" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95f-5m-Nzj">
+                        <rect key="frame" x="146" y="18" width="40" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="95f-5m-Nzj" firstAttribute="leading" secondItem="Bkx-fc-hGE" secondAttribute="trailing" constant="33" id="02z-hA-37F"/>
+                    <constraint firstItem="Bkx-fc-hGE" firstAttribute="leading" secondItem="V3Q-IN-CuL" secondAttribute="trailing" constant="27" id="CN4-t7-2n7"/>
+                    <constraint firstItem="Rji-1E-5TW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="OR7-Xj-oHK"/>
+                    <constraint firstItem="Rji-1E-5TW" firstAttribute="top" secondItem="Bkx-fc-hGE" secondAttribute="bottom" constant="5" id="Swe-nq-LkG"/>
+                    <constraint firstItem="nII-Rd-OxV" firstAttribute="centerY" secondItem="95f-5m-Nzj" secondAttribute="centerY" id="aqz-CU-GMD"/>
+                    <constraint firstAttribute="trailing" secondItem="Rji-1E-5TW" secondAttribute="trailing" id="dpq-RK-MKL"/>
+                    <constraint firstItem="V3Q-IN-CuL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="eyK-1Y-gOL"/>
+                    <constraint firstItem="V3Q-IN-CuL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="ftC-mp-QVg"/>
+                    <constraint firstItem="Rji-1E-5TW" firstAttribute="bottom" secondItem="V3Q-IN-CuL" secondAttribute="bottom" id="iVZ-DL-OcO"/>
+                    <constraint firstItem="95f-5m-Nzj" firstAttribute="centerY" secondItem="Bkx-fc-hGE" secondAttribute="centerY" id="syp-Kx-XbC"/>
+                    <constraint firstAttribute="trailing" secondItem="nII-Rd-OxV" secondAttribute="trailing" constant="16" id="xr4-Bd-1e2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="provinceLabel" destination="95f-5m-Nzj" id="d6f-hZ-nIp"/>
+                <outlet property="titlelabel" destination="Bkx-fc-hGE" id="BCH-jK-Qtb"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="search-2" width="20" height="16"/>
+        <image name="searchbtn-2" width="8" height="12"/>
+    </resources>
+</document>

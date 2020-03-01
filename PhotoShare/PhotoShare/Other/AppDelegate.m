@@ -46,7 +46,7 @@
     NetworkStatus netStatus = [reachability currentReachabilityStatus];
     if (netStatus == NotReachable) {
         NSLog(@"====当前网络状态不可用=======");
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前网络状态便可用" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前网络状态不可用" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"点击了按钮");
         }]];

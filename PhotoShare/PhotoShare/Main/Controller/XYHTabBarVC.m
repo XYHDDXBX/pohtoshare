@@ -9,8 +9,6 @@
 #import "XYHTabBarVC.h"
 #import "XYHNavigationController.h"
 
-
-
 @interface XYHTabBarVC ()<UITabBarControllerDelegate>
 
 
@@ -29,6 +27,7 @@
     [super viewDidLoad];
     self.tabBarController.delegate=self;
     [[UITabBar appearance] setBackgroundColor:[UIColor colorWithRed:(255)/255.0 green:(255)/255.0 blue:(255)/255.0 alpha:(255)/255.0]];
+    self.tabBar.tintColor = [UIColor colorWithRed:(102)/255.0 green:(124)/255.0 blue:(137)/255.0 alpha:(255)/255.0];
    
 }
 
@@ -36,9 +35,9 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         UIViewController *square = [self addViewControllerWithClass:[XYHSquareVC class] title:@"广场" Image:@"btn-1" SeleImage:@"btn-pre-1"];
-        UIViewController *search = [self addViewControllerWithClass:[XYHSquareVC class] title:@"搜索" Image:@"btn-2" SeleImage:@"btn-pre-2"];
-        UIViewController *photo = [self addViewControllerWithClass:[XYHSquareVC class] title:@"发图" Image:@"btn-3" SeleImage:@"btn-pre-3"];
-        UIViewController *profile = [self addViewControllerWithClass:[XYHSquareVC class] title:@"我的" Image:@"btn-4" SeleImage:@"btn-pre-4"];
+        UIViewController *search = [self addViewControllerWithClass:[XYHSearchVC class] title:@"搜索" Image:@"btn-2" SeleImage:@"btn-pre-2"];
+        UIViewController *photo = [self addViewControllerWithClass:[XYHPhotoVC class] title:@"发图" Image:@"btn-3" SeleImage:@"btn-pre-3"];
+        UIViewController *profile = [self addViewControllerWithClass:[XYHProfileVC class] title:@"我的" Image:@"btn-4" SeleImage:@"btn-pre-4"];
         self.viewControllers = @[square,search,photo,profile ];
 
     }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYHPhotoVC">
+            <connections>
+                <outlet property="albumBtn" destination="ejJ-f5-KKA" id="2kc-An-vkN"/>
+                <outlet property="photoBtn" destination="HX6-ZJ-aZC" id="jxA-P3-b5m"/>
+                <outlet property="view" destination="iN0-l3-epB" id="iCn-ai-kwu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pno-0s-b9m">
+                    <rect key="frame" x="0.0" y="491" width="375" height="176"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LA9-Gv-HVG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX6-ZJ-aZC" userLabel="拍照Btn">
+                                <rect key="frame" x="72" y="72" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="6EY-zv-Q84"/>
+                                    <constraint firstAttribute="height" constant="34" id="C9A-Pg-eEv"/>
+                                </constraints>
+                                <state key="normal" image="publish-btn-1"/>
+                                <state key="highlighted" image="publish-btn-pre-1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejJ-f5-KKA" userLabel="相册Btn">
+                                <rect key="frame" x="269" y="72" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="FsJ-3c-FhJ"/>
+                                    <constraint firstAttribute="width" constant="34" id="IsT-TL-P7Q"/>
+                                </constraints>
+                                <state key="normal" image="publish-btn-2"/>
+                                <state key="highlighted" image="publish-btn-pre-2"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拍照" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-9S-pNt">
+                                <rect key="frame" x="71.5" y="113" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-yg-1gd">
+                                <rect key="frame" x="268.5" y="113" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HX6-ZJ-aZC" firstAttribute="top" secondItem="LA9-Gv-HVG" secondAttribute="top" constant="72" id="6kD-08-VLn"/>
+                            <constraint firstItem="HX6-ZJ-aZC" firstAttribute="leading" secondItem="LA9-Gv-HVG" secondAttribute="leading" constant="72" id="EbH-Tx-nTv"/>
+                            <constraint firstAttribute="trailing" secondItem="ejJ-f5-KKA" secondAttribute="trailing" constant="72" id="Tbf-62-pfj"/>
+                            <constraint firstItem="jsq-yg-1gd" firstAttribute="top" secondItem="ejJ-f5-KKA" secondAttribute="bottom" constant="7" id="bb5-qi-0Jr"/>
+                            <constraint firstItem="gZ3-9S-pNt" firstAttribute="top" secondItem="HX6-ZJ-aZC" secondAttribute="bottom" constant="7" id="dPY-lt-3un"/>
+                            <constraint firstItem="jsq-yg-1gd" firstAttribute="centerX" secondItem="ejJ-f5-KKA" secondAttribute="centerX" id="em0-qo-vti"/>
+                            <constraint firstItem="ejJ-f5-KKA" firstAttribute="top" secondItem="HX6-ZJ-aZC" secondAttribute="top" id="sh2-Bl-XOo"/>
+                            <constraint firstItem="gZ3-9S-pNt" firstAttribute="centerX" secondItem="HX6-ZJ-aZC" secondAttribute="centerX" id="uYF-SW-0oC"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="176" id="bxP-gg-sVL"/>
+                    </constraints>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pno-0s-b9m" secondAttribute="trailing" id="R79-Qc-jbD"/>
+                <constraint firstItem="Pno-0s-b9m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jrJ-oX-ZfI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pno-0s-b9m" secondAttribute="bottom" id="lYs-Qc-syn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="publish-btn-1" width="34" height="34"/>
+        <image name="publish-btn-2" width="34" height="26"/>
+        <image name="publish-btn-pre-1" width="34" height="34"/>
+        <image name="publish-btn-pre-2" width="34" height="26"/>
+    </resources>
+</document>

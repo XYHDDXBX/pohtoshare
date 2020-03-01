@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		033895ADB90C21E0A510A12F /* Pods_PhotoShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38148A22E6C65B6A8155DC78 /* Pods_PhotoShare.framework */; };
+		DF18F7502406A64F009112E7 /* XYHheadView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F74F2406A64F009112E7 /* XYHheadView.m */; };
+		DF18F7522406A659009112E7 /* XYHheadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F7512406A659009112E7 /* XYHheadView.xib */; };
+		DF18F7562406A967009112E7 /* XYHsearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F7542406A967009112E7 /* XYHsearchCell.m */; };
+		DF18F7572406A967009112E7 /* XYHsearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F7552406A967009112E7 /* XYHsearchCell.xib */; };
+		DF18F769240758C6009112E7 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F75C240758C6009112E7 /* NSString+PinYin4Cocoa.m */; };
+		DF18F76A240758C6009112E7 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F75F240758C6009112E7 /* PinyinHelper.m */; };
+		DF18F76B240758C6009112E7 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F761240758C6009112E7 /* HanyuPinyinOutputFormat.m */; };
+		DF18F76C240758C6009112E7 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F762240758C6009112E7 /* ChineseToPinyinResource.m */; };
+		DF18F76D240758C6009112E7 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F763240758C6009112E7 /* PinyinFormatter.m */; };
+		DF18F76E240758C6009112E7 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF18F766240758C6009112E7 /* unicode_to_hanyu_pinyin.txt */; };
+		DF18F7762408E68C009112E7 /* XYHPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F7752408E68C009112E7 /* XYHPhotoVC.xib */; };
+		DF18F77C240901ED009112E7 /* XYHEdictVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F77A240901ED009112E7 /* XYHEdictVC.m */; };
+		DF18F77D240901ED009112E7 /* XYHEdictVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F77B240901ED009112E7 /* XYHEdictVC.xib */; };
 		DF2021B023FD1EC200EDFD16 /* photolistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021AF23FD1EC200EDFD16 /* photolistModel.m */; };
 		DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */; };
 		DF4EB3EC24013710008CAD75 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB3EB24013710008CAD75 /* Reachability.m */; };
@@ -41,6 +54,28 @@
 		38148A22E6C65B6A8155DC78 /* Pods_PhotoShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0CC5845AABDA18482078F2 /* Pods-PhotoShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoShare/Pods-PhotoShare.release.xcconfig"; sourceTree = "<group>"; };
 		CD78D991B82E86FC6BDBEE00 /* Pods-PhotoShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoShare/Pods-PhotoShare.debug.xcconfig"; sourceTree = "<group>"; };
+		DF18F74E2406A64F009112E7 /* XYHheadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHheadView.h; sourceTree = "<group>"; };
+		DF18F74F2406A64F009112E7 /* XYHheadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHheadView.m; sourceTree = "<group>"; };
+		DF18F7512406A659009112E7 /* XYHheadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHheadView.xib; sourceTree = "<group>"; };
+		DF18F7532406A967009112E7 /* XYHsearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHsearchCell.h; sourceTree = "<group>"; };
+		DF18F7542406A967009112E7 /* XYHsearchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHsearchCell.m; sourceTree = "<group>"; };
+		DF18F7552406A967009112E7 /* XYHsearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHsearchCell.xib; sourceTree = "<group>"; };
+		DF18F75A240758C6009112E7 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		DF18F75B240758C6009112E7 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		DF18F75C240758C6009112E7 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		DF18F75D240758C6009112E7 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		DF18F75E240758C6009112E7 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		DF18F75F240758C6009112E7 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		DF18F760240758C6009112E7 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		DF18F761240758C6009112E7 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		DF18F762240758C6009112E7 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		DF18F763240758C6009112E7 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		DF18F764240758C6009112E7 /* PinYin4Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYin4Objc.h; sourceTree = "<group>"; };
+		DF18F766240758C6009112E7 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		DF18F7752408E68C009112E7 /* XYHPhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHPhotoVC.xib; sourceTree = "<group>"; };
+		DF18F779240901ED009112E7 /* XYHEdictVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHEdictVC.h; sourceTree = "<group>"; };
+		DF18F77A240901ED009112E7 /* XYHEdictVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHEdictVC.m; sourceTree = "<group>"; };
+		DF18F77B240901ED009112E7 /* XYHEdictVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHEdictVC.xib; sourceTree = "<group>"; };
 		DF2021AE23FD1EC200EDFD16 /* photolistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = photolistModel.h; sourceTree = "<group>"; };
 		DF2021AF23FD1EC200EDFD16 /* photolistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photolistModel.m; sourceTree = "<group>"; };
 		DF2021B223FD214B00EDFD16 /* XYHHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHHttpTool.h; sourceTree = "<group>"; };
@@ -122,6 +157,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DF18F758240758C6009112E7 /* PinYin4Objc */ = {
+			isa = PBXGroup;
+			children = (
+				DF18F759240758C6009112E7 /* Classes */,
+				DF18F765240758C6009112E7 /* Resources */,
+			);
+			path = PinYin4Objc;
+			sourceTree = "<group>";
+		};
+		DF18F759240758C6009112E7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF18F75A240758C6009112E7 /* PinyinHelper.h */,
+				DF18F75B240758C6009112E7 /* HanyuPinyinOutputFormat.h */,
+				DF18F75C240758C6009112E7 /* NSString+PinYin4Cocoa.m */,
+				DF18F75D240758C6009112E7 /* ChineseToPinyinResource.h */,
+				DF18F75E240758C6009112E7 /* PinyinFormatter.h */,
+				DF18F75F240758C6009112E7 /* PinyinHelper.m */,
+				DF18F760240758C6009112E7 /* NSString+PinYin4Cocoa.h */,
+				DF18F761240758C6009112E7 /* HanyuPinyinOutputFormat.m */,
+				DF18F762240758C6009112E7 /* ChineseToPinyinResource.m */,
+				DF18F763240758C6009112E7 /* PinyinFormatter.m */,
+				DF18F764240758C6009112E7 /* PinYin4Objc.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DF18F765240758C6009112E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF18F766240758C6009112E7 /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DF1B178E23D5EBE200E9F00B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +202,7 @@
 		DF2021B123FD20CF00EDFD16 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				DF18F758240758C6009112E7 /* PinYin4Objc */,
 				DF4EB3EA24013710008CAD75 /* Reachability.h */,
 				DF4EB3EB24013710008CAD75 /* Reachability.m */,
 				DF2021B223FD214B00EDFD16 /* XYHHttpTool.h */,
@@ -191,6 +262,10 @@
 			children = (
 				DFCD425C23D0B7E3006BB290 /* XYHPhotoVC.h */,
 				DFCD425D23D0B7E3006BB290 /* XYHPhotoVC.m */,
+				DF18F7752408E68C009112E7 /* XYHPhotoVC.xib */,
+				DF18F779240901ED009112E7 /* XYHEdictVC.h */,
+				DF18F77A240901ED009112E7 /* XYHEdictVC.m */,
+				DF18F77B240901ED009112E7 /* XYHEdictVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +359,12 @@
 		DFCD424023D0B458006BB290 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF18F74E2406A64F009112E7 /* XYHheadView.h */,
+				DF18F74F2406A64F009112E7 /* XYHheadView.m */,
+				DF18F7512406A659009112E7 /* XYHheadView.xib */,
+				DF18F7532406A967009112E7 /* XYHsearchCell.h */,
+				DF18F7542406A967009112E7 /* XYHsearchCell.m */,
+				DF18F7552406A967009112E7 /* XYHsearchCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,6 +521,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEDC73223FD78FE00E30374 /* XYHPhotoDeatilVC.xib in Resources */,
+				DF18F77D240901ED009112E7 /* XYHEdictVC.xib in Resources */,
+				DF18F7572406A967009112E7 /* XYHsearchCell.xib in Resources */,
+				DF18F7762408E68C009112E7 /* XYHPhotoVC.xib in Resources */,
+				DF18F7522406A659009112E7 /* XYHheadView.xib in Resources */,
+				DF18F76E240758C6009112E7 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				DF4EB40524021780008CAD75 /* XYHpopMenumVC.xib in Resources */,
 				DFCD422823D0AF92006BB290 /* LaunchScreen.storyboard in Resources */,
 				DF4EB3F124014E80008CAD75 /* XYHRefresh.xib in Resources */,
@@ -495,23 +581,31 @@
 			files = (
 				DF67825523FBC1D30083F80C /* SquareCell.m in Sources */,
 				DFCD424623D0B458006BB290 /* AppDelegate.m in Sources */,
+				DF18F76C240758C6009112E7 /* ChineseToPinyinResource.m in Sources */,
 				DFCD425223D0B525006BB290 /* BaseViewController.m in Sources */,
 				DFEDC73123FD78FE00E30374 /* XYHPhotoDeatilVC.m in Sources */,
+				DF18F76B240758C6009112E7 /* HanyuPinyinOutputFormat.m in Sources */,
+				DF18F77C240901ED009112E7 /* XYHEdictVC.m in Sources */,
 				DFCD425B23D0B63D006BB290 /* UIImage+Color.m in Sources */,
+				DF18F76A240758C6009112E7 /* PinyinHelper.m in Sources */,
 				DFCD425E23D0B7E3006BB290 /* XYHPhotoVC.m in Sources */,
+				DF18F7502406A64F009112E7 /* XYHheadView.m in Sources */,
 				DFCD424523D0B458006BB290 /* main.m in Sources */,
+				DF18F76D240758C6009112E7 /* PinyinFormatter.m in Sources */,
 				DFEDC72823FD669F00E30374 /* XYHFMDBTool.m in Sources */,
 				DFCD425323D0B525006BB290 /* XYHNavigationController.m in Sources */,
 				DFCD426723D0B81B006BB290 /* XYHSquareVC.m in Sources */,
 				DFCD426423D0B806006BB290 /* XYHSearchVC.m in Sources */,
 				DF4EB40424021780008CAD75 /* XYHpopMenumVC.m in Sources */,
 				DF2021B023FD1EC200EDFD16 /* photolistModel.m in Sources */,
+				DF18F7562406A967009112E7 /* XYHsearchCell.m in Sources */,
 				DFCD425723D0B5BF006BB290 /* XYHBarButtonItem.m in Sources */,
 				DFCD426123D0B7F5006BB290 /* XYHProfileVC.m in Sources */,
 				DF4EB3EF24014E71008CAD75 /* XYHRefresh.m in Sources */,
 				DF4EB3EC24013710008CAD75 /* Reachability.m in Sources */,
 				DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */,
 				DFCD426C23D17CD4006BB290 /* UIBarButtonItem+XYHBarButtonIterm.m in Sources */,
+				DF18F769240758C6009112E7 /* NSString+PinYin4Cocoa.m in Sources */,
 				DFCD425123D0B525006BB290 /* XYHTabBarVC.m in Sources */,
 				DF67825823FBC4080083F80C /* UIColor+XYHColor.m in Sources */,
 			);
@@ -647,8 +741,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PWS9UN7U8;
 				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,8 +761,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PWS9UN7U8;
 				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

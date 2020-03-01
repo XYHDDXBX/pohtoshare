@@ -94,8 +94,9 @@ static NSString *ID = @"cell";
         refreshView.refrshBtn.frame = CGRectMake(139, 21, 22, 19);
         [refreshView.refrshBtn setImage:[UIImage imageNamed:@"refresh-1"] forState:UIControlStateNormal];
         refreshView.refrshLabel.text = @"更新中...";
-       
-        [XYHHttpTool XYH_GET:@"http://localhost:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
+        //http://localhost:3000/photolist?limit=20&offset=0
+        //真机测试 IP为192.168.10.4
+        [XYHHttpTool XYH_GET:@"http://192.168.10.4:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
                 NSArray *newArray = [photolistModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"photolist"]];
                 NSRange range = NSMakeRange(0, newArray.count);
                 NSIndexSet *index = [NSIndexSet indexSetWithIndexesInRange:range];
@@ -151,7 +152,7 @@ static NSString *ID = @"cell";
 
 -(void)loadPhotolist{
     
-    [XYHHttpTool XYH_GET:@"http://localhost:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
+    [XYHHttpTool XYH_GET:@"http://192.168.10.4:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
         self.photolistArray = [photolistModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"photolist"]];
         [self.tableview reloadData];
         [XYHFMDBTool saveWithPhotoList:self.photolistArray];

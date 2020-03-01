@@ -32,10 +32,7 @@
     }else{
         self.photoImageView.image = [UIImage imageNamed:@"pho-3"];
     }
-    
-    
-    
-    
+
 }
 
 - (void)awakeFromNib {
@@ -55,7 +52,6 @@
     maskLayer.path = path.CGPath;
     maskLayer.masksToBounds = NO;
     self.photoImageView.layer.mask = maskLayer;
-    
     
 }
 

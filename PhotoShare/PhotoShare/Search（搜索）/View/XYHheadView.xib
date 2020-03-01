@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XYHheadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmB-Pk-NWP">
+                    <rect key="frame" x="26" y="11" width="21" height="22"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="eLy-wG-Rgf"/>
+                        <constraint firstAttribute="width" constant="21" id="mPi-Qt-oJK"/>
+                    </constraints>
+                    <state key="normal" image="search-4"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猜你想搜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8c-Kp-TyQ">
+                    <rect key="frame" x="62" y="15" width="45" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="j8c-Kp-TyQ" firstAttribute="leading" secondItem="mmB-Pk-NWP" secondAttribute="trailing" constant="15" id="63a-JR-sF7"/>
+                <constraint firstItem="mmB-Pk-NWP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="BCu-sl-xRQ"/>
+                <constraint firstItem="mmB-Pk-NWP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="26" id="NbQ-mw-Qw3"/>
+                <constraint firstItem="j8c-Kp-TyQ" firstAttribute="centerY" secondItem="mmB-Pk-NWP" secondAttribute="centerY" id="XrE-Ac-shy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="headLabel" destination="j8c-Kp-TyQ" id="uec-Ka-eiN"/>
+                <outlet property="headbtn" destination="mmB-Pk-NWP" id="rDj-Rz-pcy"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="95.802098950524751"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search-4" width="21" height="12"/>
+    </resources>
+</document>
