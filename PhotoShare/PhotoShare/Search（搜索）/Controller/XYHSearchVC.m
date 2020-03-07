@@ -201,6 +201,7 @@ static NSString *searchID = @"search";
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;{
     if(searchText){
         searchstatus = true;
+        self.tableview.tableFooterView.hidden = YES;
         XYHheadView *view = (XYHheadView *)self.tableview.tableHeaderView;
         view.headLabel.text = @"猜你想搜";
         [view.headbtn setImage:[UIImage imageNamed:@"search-4"] forState:UIControlStateNormal];
@@ -263,7 +264,6 @@ static NSString *searchID = @"search";
     }else{
         self.footerLabel.text = @"";
     }
-    
 }
 
 @end

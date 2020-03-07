@@ -10,6 +10,7 @@
 #import <FMDB.h>
 #import "photolistModel.h"
 #import "MJExtension.h"
+#import "XYHUserModel.h"
 @implementation XYHFMDBTool
 static  FMDatabase *_db;
 
@@ -34,6 +35,14 @@ static  FMDatabase *_db;
      }else{
          NSLog(@"创建图片表格失败");
      }
+    
+    //创建表格2:用户
+    BOOL flag2= [db executeUpdate:@"create table if not exists t_userinfo (id integer primary key autoincrement, user blob);"];
+    if (flag2){
+        NSLog(@"创建用户表格成功");
+    }else{
+        NSLog(@"创建用户表格失败");
+    }
 
 }
 
@@ -60,8 +69,44 @@ static  FMDatabase *_db;
     return array;
 }
 
+//保存用户模型
++(void)saveWithUser:(XYHUserModel *)userM{
+    NSDictionary *dict=userM.mj_keyValues;
+    NSData *data=[NSKeyedArchiver  archivedDataWithRootObject:dict];
+        BOOL flag = [_db executeUpdate:@"insert into t_userinfo (user) values(?)",data];
+        if (flag) {
+            NSLog(@"用户列表保存成功");
+        }else{
+            NSLog(@"用户列表保存失败");
+        }
+}
+
+//取用户模型
++(XYHUserModel *)userWithSQL:(NSString *)sql{
+    FMResultSet *set = [_db executeQuery:sql];
+    XYHUserModel *userModel = [[XYHUserModel alloc] init];
+    while ([set next]) {
+        NSData *data = [set dataForColumn:@"user"];
+        NSDictionary *modelDict=[NSKeyedUnarchiver unarchiveObjectWithData:data];
+        XYHUserModel *model=[ XYHUserModel mj_objectWithKeyValues:modelDict];
+        userModel = model;
+    }
+    return userModel;
+}
+
+//修改用户模型的state
++(void)updateWithUserstate:(NSData *)state OriginalState:(NSData *)originalState{
+    BOOL flag = [_db executeUpdate:@"update t_userinfo  set  user=? where user=? ",state,originalState];
+    if (flag) {
+        NSLog(@"状态修改成功");
+    }else{
+        NSLog(@"状态修改失败");
+    }
+    
+}
+
 //模型转data
-+(NSData *) dataFromModel:(photolistModel *)model
++(NSData *)dataFromModel:(photolistModel *)model
 {
     NSDictionary *dict=model.mj_keyValues;
     NSData *data=[NSKeyedArchiver  archivedDataWithRootObject:dict];

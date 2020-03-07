@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		033895ADB90C21E0A510A12F /* Pods_PhotoShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38148A22E6C65B6A8155DC78 /* Pods_PhotoShare.framework */; };
 		DF18F7502406A64F009112E7 /* XYHheadView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F74F2406A64F009112E7 /* XYHheadView.m */; };
 		DF18F7522406A659009112E7 /* XYHheadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F7512406A659009112E7 /* XYHheadView.xib */; };
 		DF18F7562406A967009112E7 /* XYHsearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF18F7542406A967009112E7 /* XYHsearchCell.m */; };
@@ -24,6 +23,19 @@
 		DF2021B023FD1EC200EDFD16 /* photolistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021AF23FD1EC200EDFD16 /* photolistModel.m */; };
 		DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */; };
 		DF2E1A49240B9DFA00A4ACD9 /* XYHProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */; };
+		DF2E1A4D240DFBDA00A4ACD9 /* XYHLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A4B240DFBDA00A4ACD9 /* XYHLoginVC.m */; };
+		DF2E1A4E240DFBDA00A4ACD9 /* XYHLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A4C240DFBDA00A4ACD9 /* XYHLoginVC.xib */; };
+		DF2E1A52240E00DA00A4ACD9 /* XYHRegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A50240E00DA00A4ACD9 /* XYHRegistVC.m */; };
+		DF2E1A53240E00DA00A4ACD9 /* XYHRegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A51240E00DA00A4ACD9 /* XYHRegistVC.xib */; };
+		DF2E1A56240E08B000A4ACD9 /* XYHUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A55240E08B000A4ACD9 /* XYHUserModel.m */; };
+		DF2E1A59240E487500A4ACD9 /* XYHMd5Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A58240E487500A4ACD9 /* XYHMd5Encrypt.m */; };
+		DF2E1A62241095BA00A4ACD9 /* XYHSetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A60241095BA00A4ACD9 /* XYHSetingVC.m */; };
+		DF2E1A63241095BA00A4ACD9 /* XYHSetingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A61241095BA00A4ACD9 /* XYHSetingVC.xib */; };
+		DF2E1A662410A3DE00A4ACD9 /* XYHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A652410A3DE00A4ACD9 /* XYHImage.m */; };
+		DF2E1A6A24110E3500A4ACD9 /* XYHfeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A6824110E3500A4ACD9 /* XYHfeedBackVC.m */; };
+		DF2E1A6B24110E3500A4ACD9 /* XYHfeedBackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A6924110E3500A4ACD9 /* XYHfeedBackVC.xib */; };
+		DF2E1A6F2411159000A4ACD9 /* XYHQuitPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A6D2411159000A4ACD9 /* XYHQuitPopVC.m */; };
+		DF2E1A702411159000A4ACD9 /* XYHQuitPopVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A6E2411159000A4ACD9 /* XYHQuitPopVC.xib */; };
 		DF4EB3EC24013710008CAD75 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB3EB24013710008CAD75 /* Reachability.m */; };
 		DF4EB3EF24014E71008CAD75 /* XYHRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB3EE24014E71008CAD75 /* XYHRefresh.m */; };
 		DF4EB3F124014E80008CAD75 /* XYHRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4EB3F024014E80008CAD75 /* XYHRefresh.xib */; };
@@ -32,6 +44,7 @@
 		DF67825423FBC1D30083F80C /* SquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF67825123FBC1D30083F80C /* SquareCell.xib */; };
 		DF67825523FBC1D30083F80C /* SquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67825323FBC1D30083F80C /* SquareCell.m */; };
 		DF67825823FBC4080083F80C /* UIColor+XYHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67825723FBC4080083F80C /* UIColor+XYHColor.m */; };
+		DFA469292413677B003E427A /* Pods_PhotoShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C4FBC2ACFE4208ABB40CB9 /* Pods_PhotoShare.framework */; };
 		DFCD422523D0AF92006BB290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCD422423D0AF92006BB290 /* Assets.xcassets */; };
 		DFCD422823D0AF92006BB290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCD422623D0AF92006BB290 /* LaunchScreen.storyboard */; };
 		DFCD424523D0B458006BB290 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCD423B23D0B458006BB290 /* main.m */; };
@@ -52,9 +65,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38148A22E6C65B6A8155DC78 /* Pods_PhotoShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A0CC5845AABDA18482078F2 /* Pods-PhotoShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoShare/Pods-PhotoShare.release.xcconfig"; sourceTree = "<group>"; };
-		CD78D991B82E86FC6BDBEE00 /* Pods-PhotoShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoShare/Pods-PhotoShare.debug.xcconfig"; sourceTree = "<group>"; };
+		32653BE3E336B336FFEB90F1 /* Pods-PhotoShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.release.xcconfig"; path = "Target Support Files/Pods-PhotoShare/Pods-PhotoShare.release.xcconfig"; sourceTree = "<group>"; };
+		AF3C2931C0C636A14DAC8CCA /* Pods-PhotoShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.debug.xcconfig"; path = "Target Support Files/Pods-PhotoShare/Pods-PhotoShare.debug.xcconfig"; sourceTree = "<group>"; };
+		DF147C80241364010070039C /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF147C822413640A0070039C /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF147C84241364120070039C /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF18F74E2406A64F009112E7 /* XYHheadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHheadView.h; sourceTree = "<group>"; };
 		DF18F74F2406A64F009112E7 /* XYHheadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHheadView.m; sourceTree = "<group>"; };
 		DF18F7512406A659009112E7 /* XYHheadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHheadView.xib; sourceTree = "<group>"; };
@@ -82,6 +97,27 @@
 		DF2021B223FD214B00EDFD16 /* XYHHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHHttpTool.h; sourceTree = "<group>"; };
 		DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHHttpTool.m; sourceTree = "<group>"; };
 		DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHProfileVC.xib; sourceTree = "<group>"; };
+		DF2E1A4A240DFBDA00A4ACD9 /* XYHLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHLoginVC.h; sourceTree = "<group>"; };
+		DF2E1A4B240DFBDA00A4ACD9 /* XYHLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHLoginVC.m; sourceTree = "<group>"; };
+		DF2E1A4C240DFBDA00A4ACD9 /* XYHLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHLoginVC.xib; sourceTree = "<group>"; };
+		DF2E1A4F240E00DA00A4ACD9 /* XYHRegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHRegistVC.h; sourceTree = "<group>"; };
+		DF2E1A50240E00DA00A4ACD9 /* XYHRegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHRegistVC.m; sourceTree = "<group>"; };
+		DF2E1A51240E00DA00A4ACD9 /* XYHRegistVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHRegistVC.xib; sourceTree = "<group>"; };
+		DF2E1A54240E08B000A4ACD9 /* XYHUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHUserModel.h; sourceTree = "<group>"; };
+		DF2E1A55240E08B000A4ACD9 /* XYHUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHUserModel.m; sourceTree = "<group>"; };
+		DF2E1A57240E487500A4ACD9 /* XYHMd5Encrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHMd5Encrypt.h; sourceTree = "<group>"; };
+		DF2E1A58240E487500A4ACD9 /* XYHMd5Encrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHMd5Encrypt.m; sourceTree = "<group>"; };
+		DF2E1A5F241095BA00A4ACD9 /* XYHSetingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHSetingVC.h; sourceTree = "<group>"; };
+		DF2E1A60241095BA00A4ACD9 /* XYHSetingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHSetingVC.m; sourceTree = "<group>"; };
+		DF2E1A61241095BA00A4ACD9 /* XYHSetingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHSetingVC.xib; sourceTree = "<group>"; };
+		DF2E1A642410A3DE00A4ACD9 /* XYHImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHImage.h; sourceTree = "<group>"; };
+		DF2E1A652410A3DE00A4ACD9 /* XYHImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHImage.m; sourceTree = "<group>"; };
+		DF2E1A6724110E3500A4ACD9 /* XYHfeedBackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHfeedBackVC.h; sourceTree = "<group>"; };
+		DF2E1A6824110E3500A4ACD9 /* XYHfeedBackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHfeedBackVC.m; sourceTree = "<group>"; };
+		DF2E1A6924110E3500A4ACD9 /* XYHfeedBackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHfeedBackVC.xib; sourceTree = "<group>"; };
+		DF2E1A6C2411159000A4ACD9 /* XYHQuitPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHQuitPopVC.h; sourceTree = "<group>"; };
+		DF2E1A6D2411159000A4ACD9 /* XYHQuitPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHQuitPopVC.m; sourceTree = "<group>"; };
+		DF2E1A6E2411159000A4ACD9 /* XYHQuitPopVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHQuitPopVC.xib; sourceTree = "<group>"; };
 		DF4EB3EA24013710008CAD75 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DF4EB3EB24013710008CAD75 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DF4EB3ED24014E71008CAD75 /* XYHRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHRefresh.h; sourceTree = "<group>"; };
@@ -95,6 +131,19 @@
 		DF67825323FBC1D30083F80C /* SquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareCell.m; sourceTree = "<group>"; };
 		DF67825623FBC4080083F80C /* UIColor+XYHColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+XYHColor.h"; sourceTree = "<group>"; };
 		DF67825723FBC4080083F80C /* UIColor+XYHColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XYHColor.m"; sourceTree = "<group>"; };
+		DFA4691A24136744003E427A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		DFA4691B24136744003E427A /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DFA4691E24136744003E427A /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		DFA4691F24136744003E427A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DFA4692024136744003E427A /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		DFA4692124136744003E427A /* FMDatabasePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		DFA4692224136744003E427A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DFA4692324136744003E427A /* FMDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		DFA4692424136744003E427A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DFA4692524136744003E427A /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		DFA4692624136744003E427A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DFA4692724136744003E427A /* FMDatabasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		DFA4692824136744003E427A /* FMResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		DFCD421823D0AF8E006BB290 /* PhotoShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCD422423D0AF92006BB290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFCD422723D0AF92006BB290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +177,7 @@
 		DFEDC72E23FD78FE00E30374 /* XYHPhotoDeatilVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHPhotoDeatilVC.h; sourceTree = "<group>"; };
 		DFEDC72F23FD78FE00E30374 /* XYHPhotoDeatilVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHPhotoDeatilVC.m; sourceTree = "<group>"; };
 		DFEDC73023FD78FE00E30374 /* XYHPhotoDeatilVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHPhotoDeatilVC.xib; sourceTree = "<group>"; };
+		E6C4FBC2ACFE4208ABB40CB9 /* Pods_PhotoShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,28 +185,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033895ADB90C21E0A510A12F /* Pods_PhotoShare.framework in Frameworks */,
+				DFA469292413677B003E427A /* Pods_PhotoShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		010E720EA0F407A5CBF304F7 /* Frameworks */ = {
+		1BB9C7198E082FB996A1B880 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				38148A22E6C65B6A8155DC78 /* Pods_PhotoShare.framework */,
+				AF3C2931C0C636A14DAC8CCA /* Pods-PhotoShare.debug.xcconfig */,
+				32653BE3E336B336FFEB90F1 /* Pods-PhotoShare.release.xcconfig */,
 			);
-			name = Frameworks;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		CAA6E6E5009953EFC4BF443A /* Pods */ = {
+		CA127FDCB228EED870AA0C52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD78D991B82E86FC6BDBEE00 /* Pods-PhotoShare.debug.xcconfig */,
-				5A0CC5845AABDA18482078F2 /* Pods-PhotoShare.release.xcconfig */,
+				DFA4691924136744003E427A /* FMDB */,
+				DF147C84241364120070039C /* MJExtension.framework */,
+				DF147C822413640A0070039C /* FMDB.framework */,
+				DF147C80241364010070039C /* AFNetworking.framework */,
+				E6C4FBC2ACFE4208ABB40CB9 /* Pods_PhotoShare.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DF18F758240758C6009112E7 /* PinYin4Objc */ = {
@@ -211,8 +265,49 @@
 				DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */,
 				DFEDC72623FD669F00E30374 /* XYHFMDBTool.h */,
 				DFEDC72723FD669F00E30374 /* XYHFMDBTool.m */,
+				DF2E1A57240E487500A4ACD9 /* XYHMd5Encrypt.h */,
+				DF2E1A58240E487500A4ACD9 /* XYHMd5Encrypt.m */,
+				DF2E1A642410A3DE00A4ACD9 /* XYHImage.h */,
+				DF2E1A652410A3DE00A4ACD9 /* XYHImage.m */,
 			);
 			path = tool;
+			sourceTree = "<group>";
+		};
+		DFA4691924136744003E427A /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				DFA4691A24136744003E427A /* README.markdown */,
+				DFA4691B24136744003E427A /* LICENSE.txt */,
+				DFA4691C24136744003E427A /* src */,
+			);
+			name = FMDB;
+			path = Pods/FMDB;
+			sourceTree = "<group>";
+		};
+		DFA4691C24136744003E427A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DFA4691D24136744003E427A /* fmdb */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DFA4691D24136744003E427A /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				DFA4691E24136744003E427A /* FMDatabase.h */,
+				DFA4691F24136744003E427A /* FMDatabaseQueue.m */,
+				DFA4692024136744003E427A /* FMResultSet.h */,
+				DFA4692124136744003E427A /* FMDatabasePool.h */,
+				DFA4692224136744003E427A /* FMDatabaseAdditions.m */,
+				DFA4692324136744003E427A /* FMDatabase.m */,
+				DFA4692424136744003E427A /* FMDatabaseQueue.h */,
+				DFA4692524136744003E427A /* FMDB.h */,
+				DFA4692624136744003E427A /* FMDatabaseAdditions.h */,
+				DFA4692724136744003E427A /* FMDatabasePool.m */,
+				DFA4692824136744003E427A /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		DFCD420F23D0AF8E006BB290 = {
@@ -220,8 +315,8 @@
 			children = (
 				DFCD421A23D0AF8E006BB290 /* PhotoShare */,
 				DFCD421923D0AF8E006BB290 /* Products */,
-				CAA6E6E5009953EFC4BF443A /* Pods */,
-				010E720EA0F407A5CBF304F7 /* Frameworks */,
+				1BB9C7198E082FB996A1B880 /* Pods */,
+				CA127FDCB228EED870AA0C52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,6 +397,21 @@
 				DFCD425F23D0B7F5006BB290 /* XYHProfileVC.h */,
 				DFCD426023D0B7F5006BB290 /* XYHProfileVC.m */,
 				DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */,
+				DF2E1A4A240DFBDA00A4ACD9 /* XYHLoginVC.h */,
+				DF2E1A4B240DFBDA00A4ACD9 /* XYHLoginVC.m */,
+				DF2E1A4C240DFBDA00A4ACD9 /* XYHLoginVC.xib */,
+				DF2E1A4F240E00DA00A4ACD9 /* XYHRegistVC.h */,
+				DF2E1A50240E00DA00A4ACD9 /* XYHRegistVC.m */,
+				DF2E1A51240E00DA00A4ACD9 /* XYHRegistVC.xib */,
+				DF2E1A5F241095BA00A4ACD9 /* XYHSetingVC.h */,
+				DF2E1A60241095BA00A4ACD9 /* XYHSetingVC.m */,
+				DF2E1A61241095BA00A4ACD9 /* XYHSetingVC.xib */,
+				DF2E1A6724110E3500A4ACD9 /* XYHfeedBackVC.h */,
+				DF2E1A6824110E3500A4ACD9 /* XYHfeedBackVC.m */,
+				DF2E1A6924110E3500A4ACD9 /* XYHfeedBackVC.xib */,
+				DF2E1A6C2411159000A4ACD9 /* XYHQuitPopVC.h */,
+				DF2E1A6D2411159000A4ACD9 /* XYHQuitPopVC.m */,
+				DF2E1A6E2411159000A4ACD9 /* XYHQuitPopVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +419,8 @@
 		DFCD423723D0B458006BB290 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF2E1A54240E08B000A4ACD9 /* XYHUserModel.h */,
+				DF2E1A55240E08B000A4ACD9 /* XYHUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,11 +583,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCD422E23D0AF92006BB290 /* Build configuration list for PBXNativeTarget "PhotoShare" */;
 			buildPhases = (
-				EC7BE0E2A6411EE6AEFA4D67 /* [CP] Check Pods Manifest.lock */,
+				8AD054C184F3CC148A78C5AB /* [CP] Check Pods Manifest.lock */,
 				DFCD421423D0AF8E006BB290 /* Sources */,
 				DFCD421523D0AF8E006BB290 /* Frameworks */,
 				DFCD421623D0AF8E006BB290 /* Resources */,
-				116470583B356B52F60383D3 /* [CP] Embed Pods Frameworks */,
+				434949544472706231BEB140 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -526,22 +638,27 @@
 				DFEDC73223FD78FE00E30374 /* XYHPhotoDeatilVC.xib in Resources */,
 				DF18F77D240901ED009112E7 /* XYHEdictVC.xib in Resources */,
 				DF18F7572406A967009112E7 /* XYHsearchCell.xib in Resources */,
+				DF2E1A63241095BA00A4ACD9 /* XYHSetingVC.xib in Resources */,
 				DF18F7762408E68C009112E7 /* XYHPhotoVC.xib in Resources */,
 				DF2E1A49240B9DFA00A4ACD9 /* XYHProfileVC.xib in Resources */,
 				DF18F7522406A659009112E7 /* XYHheadView.xib in Resources */,
+				DF2E1A53240E00DA00A4ACD9 /* XYHRegistVC.xib in Resources */,
 				DF18F76E240758C6009112E7 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				DF2E1A6B24110E3500A4ACD9 /* XYHfeedBackVC.xib in Resources */,
 				DF4EB40524021780008CAD75 /* XYHpopMenumVC.xib in Resources */,
 				DFCD422823D0AF92006BB290 /* LaunchScreen.storyboard in Resources */,
 				DF4EB3F124014E80008CAD75 /* XYHRefresh.xib in Resources */,
 				DF67825423FBC1D30083F80C /* SquareCell.xib in Resources */,
 				DFCD422523D0AF92006BB290 /* Assets.xcassets in Resources */,
+				DF2E1A4E240DFBDA00A4ACD9 /* XYHLoginVC.xib in Resources */,
+				DF2E1A702411159000A4ACD9 /* XYHQuitPopVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		116470583B356B52F60383D3 /* [CP] Embed Pods Frameworks */ = {
+		434949544472706231BEB140 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -558,16 +675,20 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoShare/Pods-PhotoShare-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC7BE0E2A6411EE6AEFA4D67 /* [CP] Check Pods Manifest.lock */ = {
+		8AD054C184F3CC148A78C5AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PhotoShare-checkManifestLockResult.txt",
 			);
@@ -588,6 +709,7 @@
 				DF18F76C240758C6009112E7 /* ChineseToPinyinResource.m in Sources */,
 				DFCD425223D0B525006BB290 /* BaseViewController.m in Sources */,
 				DFEDC73123FD78FE00E30374 /* XYHPhotoDeatilVC.m in Sources */,
+				DF2E1A662410A3DE00A4ACD9 /* XYHImage.m in Sources */,
 				DF18F76B240758C6009112E7 /* HanyuPinyinOutputFormat.m in Sources */,
 				DF18F77C240901ED009112E7 /* XYHEdictVC.m in Sources */,
 				DFCD425B23D0B63D006BB290 /* UIImage+Color.m in Sources */,
@@ -595,11 +717,15 @@
 				DFCD425E23D0B7E3006BB290 /* XYHPhotoVC.m in Sources */,
 				DF18F7502406A64F009112E7 /* XYHheadView.m in Sources */,
 				DFCD424523D0B458006BB290 /* main.m in Sources */,
+				DF2E1A6A24110E3500A4ACD9 /* XYHfeedBackVC.m in Sources */,
 				DF18F76D240758C6009112E7 /* PinyinFormatter.m in Sources */,
+				DF2E1A6F2411159000A4ACD9 /* XYHQuitPopVC.m in Sources */,
 				DFEDC72823FD669F00E30374 /* XYHFMDBTool.m in Sources */,
 				DFCD425323D0B525006BB290 /* XYHNavigationController.m in Sources */,
 				DFCD426723D0B81B006BB290 /* XYHSquareVC.m in Sources */,
 				DFCD426423D0B806006BB290 /* XYHSearchVC.m in Sources */,
+				DF2E1A52240E00DA00A4ACD9 /* XYHRegistVC.m in Sources */,
+				DF2E1A56240E08B000A4ACD9 /* XYHUserModel.m in Sources */,
 				DF4EB40424021780008CAD75 /* XYHpopMenumVC.m in Sources */,
 				DF2021B023FD1EC200EDFD16 /* photolistModel.m in Sources */,
 				DF18F7562406A967009112E7 /* XYHsearchCell.m in Sources */,
@@ -607,10 +733,13 @@
 				DFCD426123D0B7F5006BB290 /* XYHProfileVC.m in Sources */,
 				DF4EB3EF24014E71008CAD75 /* XYHRefresh.m in Sources */,
 				DF4EB3EC24013710008CAD75 /* Reachability.m in Sources */,
+				DF2E1A59240E487500A4ACD9 /* XYHMd5Encrypt.m in Sources */,
 				DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */,
 				DFCD426C23D17CD4006BB290 /* UIBarButtonItem+XYHBarButtonIterm.m in Sources */,
+				DF2E1A4D240DFBDA00A4ACD9 /* XYHLoginVC.m in Sources */,
 				DF18F769240758C6009112E7 /* NSString+PinYin4Cocoa.m in Sources */,
 				DFCD425123D0B525006BB290 /* XYHTabBarVC.m in Sources */,
+				DF2E1A62241095BA00A4ACD9 /* XYHSetingVC.m in Sources */,
 				DF67825823FBC4080083F80C /* UIColor+XYHColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -741,40 +870,44 @@
 		};
 		DFCD422F23D0AF92006BB290 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD78D991B82E86FC6BDBEE00 /* Pods-PhotoShare.debug.xcconfig */;
+			baseConfigurationReference = AF3C2931C0C636A14DAC8CCA /* Pods-PhotoShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PWS9UN7U8;
 				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.netease.com.PhotoShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		DFCD423023D0AF92006BB290 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A0CC5845AABDA18482078F2 /* Pods-PhotoShare.release.xcconfig */;
+			baseConfigurationReference = 32653BE3E336B336FFEB90F1 /* Pods-PhotoShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PWS9UN7U8;
 				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.netease.com.PhotoShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -11,8 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYHProfileVC">
             <connections>
                 <outlet property="bottomView" destination="lMW-lG-o9f" id="Lcy-id-Cre"/>
+                <outlet property="btnWidthConstrain" destination="Ozp-6E-H2D" id="rGa-Af-qto"/>
                 <outlet property="loginBtn" destination="444-q6-A2b" id="klf-Pv-cuQ"/>
+                <outlet property="nickName" destination="Xdn-4d-EBu" id="Jqm-uZ-FFT"/>
                 <outlet property="tableview" destination="XbP-mv-eVo" id="xSh-AA-Juv"/>
+                <outlet property="upConstrain" destination="h0Q-DH-rtC" id="kQp-IA-eFx"/>
                 <outlet property="upView" destination="yCq-nm-kE8" id="EZR-9K-c3o"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Msl-bC-4G4"/>
             </connections>
@@ -24,9 +27,20 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMW-lG-o9f">
                     <rect key="frame" x="0.0" y="93" width="375" height="93"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdn-4d-EBu">
+                            <rect key="frame" x="20" y="69" width="335" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="0.3008615154109589" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="93" id="SN0-bN-tcR"/>
+                        <constraint firstAttribute="trailing" secondItem="Xdn-4d-EBu" secondAttribute="trailing" constant="20" symbolic="YES" id="ZHS-R5-JSg"/>
+                        <constraint firstItem="Xdn-4d-EBu" firstAttribute="leading" secondItem="lMW-lG-o9f" secondAttribute="leading" constant="20" symbolic="YES" id="cWR-fG-gui"/>
+                        <constraint firstAttribute="bottom" secondItem="Xdn-4d-EBu" secondAttribute="bottom" constant="8" id="nol-pO-5mM"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XbP-mv-eVo">

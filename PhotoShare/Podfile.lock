@@ -25,9 +25,8 @@ DEPENDENCIES:
   - MJExtension (~> 3.0.15.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
   trunk:
+    - AFNetworking
     - FMDB
     - MJExtension
 
@@ -36,6 +35,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
 
-PODFILE CHECKSUM: 0fe433feff766b78974f1d85527fcdf75370e543
+PODFILE CHECKSUM: 7c9e38ddad22ca79d5066f46f0db5c34b86b4ce9
 
 COCOAPODS: 1.8.4
