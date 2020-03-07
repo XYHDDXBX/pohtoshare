@@ -67,9 +67,6 @@
 /* Begin PBXFileReference section */
 		32653BE3E336B336FFEB90F1 /* Pods-PhotoShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.release.xcconfig"; path = "Target Support Files/Pods-PhotoShare/Pods-PhotoShare.release.xcconfig"; sourceTree = "<group>"; };
 		AF3C2931C0C636A14DAC8CCA /* Pods-PhotoShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoShare.debug.xcconfig"; path = "Target Support Files/Pods-PhotoShare/Pods-PhotoShare.debug.xcconfig"; sourceTree = "<group>"; };
-		DF147C80241364010070039C /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF147C822413640A0070039C /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF147C84241364120070039C /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF18F74E2406A64F009112E7 /* XYHheadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHheadView.h; sourceTree = "<group>"; };
 		DF18F74F2406A64F009112E7 /* XYHheadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHheadView.m; sourceTree = "<group>"; };
 		DF18F7512406A659009112E7 /* XYHheadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHheadView.xib; sourceTree = "<group>"; };
@@ -205,9 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				DFA4691924136744003E427A /* FMDB */,
-				DF147C84241364120070039C /* MJExtension.framework */,
-				DF147C822413640A0070039C /* FMDB.framework */,
-				DF147C80241364010070039C /* AFNetworking.framework */,
 				E6C4FBC2ACFE4208ABB40CB9 /* Pods_PhotoShare.framework */,
 			);
 			name = Frameworks;
