@@ -8,6 +8,7 @@
 
 #import "SquareCell.h"
 #import "UIColor+XYHColor.h"
+#import "XYHImage.h"
 @interface SquareCell()
 
 
@@ -27,11 +28,17 @@
     self.province.text = photolistModel.province;
     self.photoNo.text = photolistModel.photoNo;
     NSData *imagedata = [NSData dataWithContentsOfURL:[NSURL URLWithString:photolistModel.imageUrl]];
-    if (imagedata) {
-        self.photoImageView.image = [UIImage imageWithData:imagedata];
+    if (photolistModel.favorite == 1) {
+        UIImage *image = [XYHImage Base64StrToUIImage:photolistModel.imageUrl];
+        self.photoImageView.image = image;
     }else{
-        self.photoImageView.image = [UIImage imageNamed:@"pho-3"];
+        if (imagedata) {
+            self.photoImageView.image = [UIImage imageWithData:imagedata];
+        }else{
+            self.photoImageView.image = [UIImage imageNamed:@"pho-3"];
+        }
     }
+    
 
 }
 

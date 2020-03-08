@@ -84,7 +84,11 @@
         self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-165, 12, 120, 20.33)];
         self.nameLabel.textColor = [UIColor colorWithRGBHex:0x999999];
         self.nameLabel.textAlignment = NSTextAlignmentRight;
-        self.nameLabel.text = self.userM.username;
+        if (self.userM.state) {
+            self.nameLabel.text = self.userM.username;
+        }else{
+            self.nameLabel.text = @"";
+        }
         [cell.contentView addSubview:self.nameLabel];
         [cell.contentView addSubview:imageV];
     }else if (indexPath.row == 1){
@@ -126,7 +130,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        [self reviseUsername];
+        if(self.userM.state){
+            [self reviseUsername];
+        }
     }else if(indexPath.row == 1){
         XYHfeedBackVC *feedback = [[XYHfeedBackVC alloc] init];
         [self.navigationController pushViewController:feedback animated:YES];

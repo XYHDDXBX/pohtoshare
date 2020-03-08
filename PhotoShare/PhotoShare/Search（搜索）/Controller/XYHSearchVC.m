@@ -56,14 +56,27 @@ static NSString *searchID = @"search";
         _searchBar.layer.masksToBounds = true;
         _searchBar.layer.cornerRadius = 4;
         _searchBar.tintColor = [UIColor colorWithRGBHex:0xacacac];
-//        UITextField *searchTextFied = [_searchBar valueForKeyPath:@"_searchField"];
-        _searchBar.searchTextField.textColor = [UIColor colorWithRGBHex:0xacacac];
-        _searchBar.searchTextField.font = [UIFont systemFontOfSize:13];
-        UIImage *image = [UIImage imageNamed:@"search-1"];
-        UIImageView *leftImageView = [[UIImageView alloc] initWithImage:image];
-        leftImageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-        _searchBar.searchTextField.leftView = leftImageView;
-        _searchBar.delegate = self;
+        NSString* phoneVersion = [[UIDevice currentDevice] systemVersion];
+        if (phoneVersion.doubleValue >= 13.0) {
+            _searchBar.searchTextField.textColor = [UIColor colorWithRGBHex:0xacacac];
+            _searchBar.searchTextField.font = [UIFont systemFontOfSize:13];
+            UIImage *image = [UIImage imageNamed:@"search-1"];
+            UIImageView *leftImageView = [[UIImageView alloc] initWithImage:image];
+            leftImageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+            _searchBar.searchTextField.leftView = leftImageView;
+            _searchBar.delegate = self;
+        }else{
+            UITextField *searchTextFied = [_searchBar valueForKeyPath:@"_searchField"];
+            searchTextFied.textColor = [UIColor colorWithRGBHex:0xacacac];
+            searchTextFied.font = [UIFont systemFontOfSize:13];
+            UIImage *image = [UIImage imageNamed:@"search-1"];
+            UIImageView *leftImageView = [[UIImageView alloc] initWithImage:image];
+            leftImageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+            searchTextFied.leftView = leftImageView;
+            _searchBar.delegate = self;
+        }
+       
+        
     }
     return _searchBar;
 }

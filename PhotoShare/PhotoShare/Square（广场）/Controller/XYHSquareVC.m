@@ -30,7 +30,7 @@ static NSString *ID = @"cell";
     if (!_tableview) {
         _tableview = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         [_tableview registerNib:[UINib nibWithNibName:NSStringFromClass([SquareCell class]) bundle:nil] forCellReuseIdentifier:ID];
-        _tableview.rowHeight = 255;
+        _tableview.rowHeight = 217;
         _tableview.showsVerticalScrollIndicator = NO;
         _tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
         
@@ -58,13 +58,8 @@ static NSString *ID = @"cell";
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupUI];
-    self.tableview.dataSource = self;
-    self.tableview.delegate = self;
-    self.tableview.refreshControl = self.refreshC;
-    [self.view addSubview:self.tableview];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     NSArray *photolisrArray = [XYHFMDBTool photoListWithSQL:@"select * from t_photolist"];
     if(photolisrArray.count){
         self.photolistArray = (NSMutableArray *)photolisrArray;
@@ -73,7 +68,15 @@ static NSString *ID = @"cell";
         [self loadPhotolist];
         
     }
-   
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupUI];
+    self.tableview.dataSource = self;
+    self.tableview.delegate = self;
+    self.tableview.refreshControl = self.refreshC;
+    [self.view addSubview:self.tableview];
 }
 
 /*
@@ -96,7 +99,7 @@ static NSString *ID = @"cell";
         refreshView.refrshLabel.text = @"更新中...";
         //http://localhost:3000/photolist?limit=20&offset=0
         //真机测试 IP为192.168.10.4
-        [XYHHttpTool XYH_GET:@"http://0.0.0.0:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
+        [XYHHttpTool XYH_GET:@"http://192.168.10.4:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
                 NSArray *newArray = [photolistModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"photolist"]];
                 NSRange range = NSMakeRange(0, newArray.count);
                 NSIndexSet *index = [NSIndexSet indexSetWithIndexesInRange:range];
@@ -110,7 +113,6 @@ static NSString *ID = @"cell";
                 [refreshView.refrshBtn setImage:[UIImage imageNamed:@"refresh-2"] forState:UIControlStateNormal];
                 refreshView.refrshLabel.text = @"下拉更新...";
             }];
-        
         /*
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
@@ -151,15 +153,13 @@ static NSString *ID = @"cell";
 
 
 -(void)loadPhotolist{
-    
-    [XYHHttpTool XYH_GET:@"http://0.0.0.0:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
+    [XYHHttpTool XYH_GET:@"http://192.168.10.4:3000/photolist?limit=20&offset=0" parameters:nil success:^(id  _Nonnull responseObject) {
         self.photolistArray = [photolistModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"photolist"]];
         [self.tableview reloadData];
         [XYHFMDBTool saveWithPhotoList:self.photolistArray];
     } failure:^(NSError * _Nonnull error) {
         NSLog(@"error = %@",error);
     }];
-    
 }
 
 
@@ -195,6 +195,7 @@ static NSString *ID = @"cell";
         view.hidden = YES;
         XYHPhotoDeatilVC *detailvc = [[XYHPhotoDeatilVC alloc] init];
         [self.navigationController pushViewController:detailvc animated:YES];
+        detailvc.isUserDetailPhoto = NO;
         detailvc.detailModel = cell.photolistModel;
     });
     

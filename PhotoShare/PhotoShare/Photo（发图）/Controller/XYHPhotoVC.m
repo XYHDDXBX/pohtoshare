@@ -103,7 +103,6 @@
         //自动闪光灯，
             if ([_device isFlashModeSupported:AVCaptureFlashModeAuto]) {
                 [_device setFlashMode:AVCaptureFlashModeAuto];
-                
             }
             //自动白平衡,但是好像一直都进不去
             if ([_device isWhiteBalanceModeSupported:AVCaptureWhiteBalanceModeAutoWhiteBalance]) {

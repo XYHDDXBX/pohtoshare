@@ -21,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign) int favorite;
 @property (nonatomic, copy) NSString *reason;
 
+-(instancetype)initWithPhotoNo:(NSString *)photoNo image:(NSString *)image title:(NSString *)title location:(NSString *)location posterName:(NSString *)posterName province:(NSString *)province favorite:(int)favorite reason:(NSString *)reason;
+
++(instancetype)ModelWithPhotoNo:(NSString *)photoNo image:(NSString *)image title:(NSString *)title location:(NSString *)location posterName:(NSString *)posterName province:(NSString *)province favorite:(int)favorite reason:(NSString *)reason;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

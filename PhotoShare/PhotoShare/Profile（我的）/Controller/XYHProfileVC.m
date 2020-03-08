@@ -14,6 +14,8 @@
 #import "XYHFMDBTool.h"
 #import "XYHSetingVC.h"
 #import "XYHImage.h"
+#import "XYHUserPhotoVC.h"
+#import "XYHUserModel.h"
 #define kScreenW [UIScreen mainScreen].bounds.size.width*1.0
 @interface XYHProfileVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
@@ -141,5 +143,24 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        [self jumpUserPhotoVC];
+    }
+}
+
+-(void)jumpUserPhotoVC{
+    XYHUserModel *userM = [XYHFMDBTool userWithSQL:@"select * from t_userinfo"];
+    if (userM.state) {
+        XYHUserPhotoVC *userPhotoVC = [[XYHUserPhotoVC alloc] init];
+        [self.navigationController pushViewController:userPhotoVC animated:YES];
+    }else{
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"您还没有登录" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+        [alertVC addAction:action];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }
+    
+}
 
 @end

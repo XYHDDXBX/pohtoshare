@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XYHPhotoDeatilVC : UIViewController
 
 @property (strong, nonatomic) photolistModel  *detailModel;
+@property (weak, nonatomic) IBOutlet UIButton *deleatBtn;
+@property (weak, nonatomic) IBOutlet UILabel *deleatLabel;
+@property(nonatomic,assign)BOOL isUserDetailPhoto;
 
 @end
 

@@ -13,6 +13,7 @@
 #import "XYHMd5Encrypt.h"
 #import "MJExtension.h"
 @interface XYHLoginVC ()
+
 @property (weak, nonatomic) IBOutlet UITextField *emailTextF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordtextF;
 @property (weak, nonatomic) IBOutlet UILabel *warnningLabel;
@@ -70,7 +71,6 @@
 - (IBAction)backBtn:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.emailTextF resignFirstResponder];

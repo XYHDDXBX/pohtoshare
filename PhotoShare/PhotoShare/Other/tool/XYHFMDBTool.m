@@ -47,7 +47,7 @@ static  FMDatabase *_db;
 }
 
 +(void)saveWithPhotoList:(NSArray *)photoArray{
-    for (photolistModel *model in photoArray) {
+    for (photolistModel *model in photoArray){
         NSData *data = [self dataFromModel:model];
         BOOL flag = [_db executeUpdate:@"insert into t_photolist (dict) values(?)",data];
         if (flag) {
@@ -60,14 +60,33 @@ static  FMDatabase *_db;
 
 +(NSArray *)photoListWithSQL:(NSString *)sql{
     FMResultSet *set = [_db executeQuery:sql];
-    NSMutableArray *array = [NSMutableArray array];
+    NSMutableArray *arrayUser = [NSMutableArray array];
+    NSMutableArray *arrayPhoto = [NSMutableArray array];
     while ([set next]) {
         NSData *data = [set dataForColumn:@"dict"];
         photolistModel *model = [self modelFromData:data];
-        [array addObject:model];
+        if (model.favorite ==1) {
+            [arrayUser addObject:model];
+        }else{
+            [arrayPhoto addObject:model];
+        }
     }
-    return array;
+    arrayUser = (NSMutableArray *)[[arrayUser reverseObjectEnumerator] allObjects];
+    for (photolistModel *model in arrayPhoto) {
+        [arrayUser addObject:model];
+    }
+    return arrayUser;
 }
+
++(void)deleatWithPhotoListModel:(NSData *)ID{
+    BOOL flag=[_db executeUpdate:@"delete from t_photolist where dict=?",ID];
+    if (flag) {
+        NSLog(@"删除成功");
+    }else{
+        NSLog(@"删除失败");
+    }
+}
+
 
 //保存用户模型
 +(void)saveWithUser:(XYHUserModel *)userM{
@@ -117,7 +136,7 @@ static  FMDatabase *_db;
 + (photolistModel *)modelFromData:(NSData *)data
 {
     NSDictionary *modelDict=[NSKeyedUnarchiver unarchiveObjectWithData:data];
-    photolistModel *model=[ photolistModel mj_objectWithKeyValues:modelDict];
+    photolistModel *model=[photolistModel mj_objectWithKeyValues:modelDict];
     return model;
 }
 

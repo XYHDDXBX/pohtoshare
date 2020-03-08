@@ -44,6 +44,7 @@
 		DF67825423FBC1D30083F80C /* SquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF67825123FBC1D30083F80C /* SquareCell.xib */; };
 		DF67825523FBC1D30083F80C /* SquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67825323FBC1D30083F80C /* SquareCell.m */; };
 		DF67825823FBC4080083F80C /* UIColor+XYHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67825723FBC4080083F80C /* UIColor+XYHColor.m */; };
+		DF8AA7612413D81F0080247C /* XYHUserPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8AA7602413D81F0080247C /* XYHUserPhotoVC.m */; };
 		DFA469292413677B003E427A /* Pods_PhotoShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C4FBC2ACFE4208ABB40CB9 /* Pods_PhotoShare.framework */; };
 		DFCD422523D0AF92006BB290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCD422423D0AF92006BB290 /* Assets.xcassets */; };
 		DFCD422823D0AF92006BB290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCD422623D0AF92006BB290 /* LaunchScreen.storyboard */; };
@@ -128,6 +129,8 @@
 		DF67825323FBC1D30083F80C /* SquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareCell.m; sourceTree = "<group>"; };
 		DF67825623FBC4080083F80C /* UIColor+XYHColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+XYHColor.h"; sourceTree = "<group>"; };
 		DF67825723FBC4080083F80C /* UIColor+XYHColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XYHColor.m"; sourceTree = "<group>"; };
+		DF8AA75F2413D81F0080247C /* XYHUserPhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHUserPhotoVC.h; sourceTree = "<group>"; };
+		DF8AA7602413D81F0080247C /* XYHUserPhotoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHUserPhotoVC.m; sourceTree = "<group>"; };
 		DFA4691A24136744003E427A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		DFA4691B24136744003E427A /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DFA4691E24136744003E427A /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -406,6 +409,8 @@
 				DF2E1A6C2411159000A4ACD9 /* XYHQuitPopVC.h */,
 				DF2E1A6D2411159000A4ACD9 /* XYHQuitPopVC.m */,
 				DF2E1A6E2411159000A4ACD9 /* XYHQuitPopVC.xib */,
+				DF8AA75F2413D81F0080247C /* XYHUserPhotoVC.h */,
+				DF8AA7602413D81F0080247C /* XYHUserPhotoVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -726,6 +731,7 @@
 				DFCD425723D0B5BF006BB290 /* XYHBarButtonItem.m in Sources */,
 				DFCD426123D0B7F5006BB290 /* XYHProfileVC.m in Sources */,
 				DF4EB3EF24014E71008CAD75 /* XYHRefresh.m in Sources */,
+				DF8AA7612413D81F0080247C /* XYHUserPhotoVC.m in Sources */,
 				DF4EB3EC24013710008CAD75 /* Reachability.m in Sources */,
 				DF2E1A59240E487500A4ACD9 /* XYHMd5Encrypt.m in Sources */,
 				DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */,
@@ -872,7 +878,7 @@
 				DEVELOPMENT_TEAM = 2PWS9UN7U8;
 				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -894,7 +900,7 @@
 				DEVELOPMENT_TEAM = 2PWS9UN7U8;
 				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

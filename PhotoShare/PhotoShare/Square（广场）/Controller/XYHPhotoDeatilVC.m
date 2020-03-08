@@ -9,6 +9,8 @@
 #import "XYHPhotoDeatilVC.h"
 #import "XYHBarButtonItem.h"
 #import "XYHpopMenumVC.h"
+#import "XYHImage.h"
+#import "XYHFMDBTool.h"
 @interface XYHPhotoDeatilVC ()
 @property (weak, nonatomic) IBOutlet UILabel *postNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
@@ -22,6 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
+    [self setDetailMsg];
+    
+}
+
+-(void)setupUI{
     UILabel *lable = [[UILabel alloc] init];
     lable.font = [UIFont systemFontOfSize:24];
     lable.text = @"详情";
@@ -31,8 +39,16 @@
     self.navigationItem.titleView = lable;
     lable.frame = CGRectMake(0, 1, 60, 40);
     self.navigationItem.leftBarButtonItem = [XYHBarButtonItem itemWithImage:@"back-1" seletedImage:@"back-pre-1" target:self action:@selector(back)];
-    [self setDetailMsg];
-    
+    [self.deleatBtn addTarget:self action:@selector(deleat) forControlEvents:UIControlEventTouchUpInside];
+    if (self.isUserDetailPhoto) {
+        self.deleatBtn.hidden = NO;
+        self.deleatBtn.userInteractionEnabled = YES;
+        self.deleatLabel.hidden = NO;
+    }else{
+        self.deleatBtn.hidden = YES;
+        self.deleatBtn.userInteractionEnabled = NO;
+        self.deleatLabel.hidden = YES;
+    }
 }
 
 -(void)setDetailMsg{
@@ -47,10 +63,15 @@
     self.reasonLabel.attributedText = attributedString;
     
     NSData *imagedata = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.detailModel.imageUrl]];
-    if (imagedata) {
-        self.detailImage.image = [UIImage imageWithData:imagedata];
+    if (self.detailModel.favorite == 1) {
+        UIImage *image = [XYHImage Base64StrToUIImage:self.detailModel.imageUrl];
+        self.detailImage.image = image;
     }else{
-        self.detailImage.image = [UIImage imageNamed:@"pho-3"];
+        if (imagedata) {
+            self.detailImage.image = [UIImage imageWithData:imagedata];
+        }else{
+            self.detailImage.image = [UIImage imageNamed:@"pho-3"];
+        }
     }
 }
 
@@ -69,6 +90,12 @@
     
    [self presentViewController:popVC animated:NO completion:nil];
     
+}
+
+-(void)deleat{
+    NSData *data = [XYHFMDBTool dataFromModel:self.detailModel];
+    [XYHFMDBTool deleatWithPhotoListModel:data];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
