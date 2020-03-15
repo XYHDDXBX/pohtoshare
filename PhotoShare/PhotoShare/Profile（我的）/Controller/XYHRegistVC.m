@@ -11,6 +11,7 @@
 #import "XYHMd5Encrypt.h"
 #import "XYHFMDBTool.h"
 #import "XYHImage.h"
+#import "SFHFKeychainUtils.h"
 @interface XYHRegistVC ()
 @property (weak, nonatomic) IBOutlet UITextField *emailTextF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextF;
@@ -38,9 +39,15 @@
             NSString *psdStr = [XYHMd5Encrypt MD5ForUpper32Bate:self.passwordTextF.text];
             //55E83457409A84BCD3B8D2143FC488FC
             NSString *imageStr = [XYHImage UIImageToBase64Str:[UIImage imageNamed:@"title-icon"]];
-            XYHUserModel *model = [XYHUserModel modelWithEmail:self.emailTextF.text password:psdStr state:NO username:@"到底奚不奚" iconImage:imageStr];
+            XYHUserModel *model = [XYHUserModel modelWithEmail:self.emailTextF.text state:NO username:@"到底奚不奚" iconImage:imageStr];
             NSLog(@"model = %@",model);
             [XYHFMDBTool saveWithUser:model];
+          BOOL isSucess = [SFHFKeychainUtils storeUsername:self.emailTextF.text andPassword:psdStr forServiceName:@"www.netease.com.PhotoShare" updateExisting:1 error:nil];
+            if (isSucess) {
+                NSLog(@"保存成功");
+            }else{
+                NSLog(@"保存失败");
+            }
             [self dismissViewControllerAnimated:YES completion:nil];
         }else{
            self.warnningLabel.text = @"请输入合法的邮箱";

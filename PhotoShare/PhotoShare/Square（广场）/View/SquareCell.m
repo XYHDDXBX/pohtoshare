@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *photoNo;
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *province;
 
 @end
@@ -27,19 +26,23 @@
     self.title.text = photolistModel.title;
     self.province.text = photolistModel.province;
     self.photoNo.text = photolistModel.photoNo;
-    NSData *imagedata = [NSData dataWithContentsOfURL:[NSURL URLWithString:photolistModel.imageUrl]];
-    if (photolistModel.favorite == 1) {
-        UIImage *image = [XYHImage Base64StrToUIImage:photolistModel.imageUrl];
-        self.photoImageView.image = image;
-    }else{
-        if (imagedata) {
-            self.photoImageView.image = [UIImage imageWithData:imagedata];
-        }else{
-            self.photoImageView.image = [UIImage imageNamed:@"pho-3"];
-        }
-    }
-    
-
+//    NSData *imagedata = [NSData dataWithContentsOfURL:[NSURL URLWithString:photolistModel.imageUrl]];
+//    if (photolistModel.favorite == 1) {
+//        UIImage *image = [XYHImage Base64StrToUIImage:photolistModel.imageUrl];
+//        self.photoImageView.image = image;
+//    }else{
+//        //异步下载图片
+//        [[NSOperationQueue new] addOperationWithBlock:^{
+//            NSData *imagedata = [NSData dataWithContentsOfURL:[NSURL URLWithString:photolistModel.imageUrl]];
+//            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                if (imagedata) {
+//                    self.photoImageView.image = [UIImage imageWithData:imagedata];
+//                }else{
+//                    self.photoImageView.image = [UIImage imageNamed:@"pho-3"];
+//                }
+//            }];
+//        }];
+//    }
 }
 
 - (void)awakeFromNib {

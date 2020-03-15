@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSString  *email;
 
-@property (strong, nonatomic) NSString  *password;
+//@property (strong, nonatomic) NSString  *password;
 
 @property(nonatomic,assign) BOOL state;
 
@@ -23,9 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString  *iconImage;
 
 //提供构造方法
--(instancetype)initWithEmail:(NSString *)email password:(NSString *)password state:(BOOL )state username:(NSString *)username iconImage:(NSString *)iconimage;
+-(instancetype)initWithEmail:(NSString *)email state:(BOOL )state username:(NSString *)username iconImage:(NSString *)iconimage;
 
-+(instancetype)modelWithEmail:(NSString *)email password:(NSString *)password state:(BOOL)state username:(NSString *)username iconImage:(NSString *)iconimage;
++(instancetype)modelWithEmail:(NSString *)email state:(BOOL)state username:(NSString *)username iconImage:(NSString *)iconimage;
 
 
 @end

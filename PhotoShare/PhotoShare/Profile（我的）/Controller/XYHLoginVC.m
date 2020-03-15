@@ -12,6 +12,7 @@
 #import "XYHRegistVC.h"
 #import "XYHMd5Encrypt.h"
 #import "MJExtension.h"
+#import "SFHFKeychainUtils.h"
 @interface XYHLoginVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextF;
@@ -27,6 +28,7 @@
     
 }
 -(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     NSLog(@"%s",__func__);
 }
 
@@ -41,9 +43,10 @@
     NSDictionary *dict=userM.mj_keyValues;
     NSData *oriData=[NSKeyedArchiver  archivedDataWithRootObject:dict];
     NSString *enpsd = [XYHMd5Encrypt MD5ForUpper32Bate:self.passwordtextF.text];
-    if (userM.email && userM.password) {
+   NSString *password = [SFHFKeychainUtils getPasswordForUsername:userM.email andServiceName:@"www.netease.com.PhotoShare" error:nil];
+    if (userM.email) {
         if (self.emailTextF.text.length && self.passwordtextF.text.length) {
-            if ([self.emailTextF.text isEqualToString:userM.email] && [enpsd isEqualToString:userM.password]) {
+            if ([self.emailTextF.text isEqualToString:userM.email] && [enpsd isEqualToString:password]) {
                 NSLog(@"登录成功");
                 userM.state = YES;
                 NSDictionary *dict=userM.mj_keyValues;

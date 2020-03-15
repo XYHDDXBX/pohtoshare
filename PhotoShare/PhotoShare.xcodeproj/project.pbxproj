@@ -22,6 +22,8 @@
 		DF18F77D240901ED009112E7 /* XYHEdictVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18F77B240901ED009112E7 /* XYHEdictVC.xib */; };
 		DF2021B023FD1EC200EDFD16 /* photolistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021AF23FD1EC200EDFD16 /* photolistModel.m */; };
 		DF2021B423FD214B00EDFD16 /* XYHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */; };
+		DF25FF102418909300F94723 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DF25FF0F2418909300F94723 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF25FF12241891E200F94723 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF25FF11241891E200F94723 /* Security.framework */; };
 		DF2E1A49240B9DFA00A4ACD9 /* XYHProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */; };
 		DF2E1A4D240DFBDA00A4ACD9 /* XYHLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1A4B240DFBDA00A4ACD9 /* XYHLoginVC.m */; };
 		DF2E1A4E240DFBDA00A4ACD9 /* XYHLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2E1A4C240DFBDA00A4ACD9 /* XYHLoginVC.xib */; };
@@ -94,6 +96,9 @@
 		DF2021AF23FD1EC200EDFD16 /* photolistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photolistModel.m; sourceTree = "<group>"; };
 		DF2021B223FD214B00EDFD16 /* XYHHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHHttpTool.h; sourceTree = "<group>"; };
 		DF2021B323FD214B00EDFD16 /* XYHHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHHttpTool.m; sourceTree = "<group>"; };
+		DF25FF0E2418909200F94723 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		DF25FF0F2418909300F94723 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		DF25FF11241891E200F94723 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DF2E1A48240B9DFA00A4ACD9 /* XYHProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHProfileVC.xib; sourceTree = "<group>"; };
 		DF2E1A4A240DFBDA00A4ACD9 /* XYHLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHLoginVC.h; sourceTree = "<group>"; };
 		DF2E1A4B240DFBDA00A4ACD9 /* XYHLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHLoginVC.m; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF25FF12241891E200F94723 /* Security.framework in Frameworks */,
 				DFA469292413677B003E427A /* Pods_PhotoShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +210,7 @@
 		CA127FDCB228EED870AA0C52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF25FF11241891E200F94723 /* Security.framework */,
 				DFA4691924136744003E427A /* FMDB */,
 				E6C4FBC2ACFE4208ABB40CB9 /* Pods_PhotoShare.framework */,
 			);
@@ -266,6 +273,8 @@
 				DF2E1A58240E487500A4ACD9 /* XYHMd5Encrypt.m */,
 				DF2E1A642410A3DE00A4ACD9 /* XYHImage.h */,
 				DF2E1A652410A3DE00A4ACD9 /* XYHImage.m */,
+				DF25FF0E2418909200F94723 /* SFHFKeychainUtils.h */,
+				DF25FF0F2418909300F94723 /* SFHFKeychainUtils.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -705,6 +714,7 @@
 			files = (
 				DF67825523FBC1D30083F80C /* SquareCell.m in Sources */,
 				DFCD424623D0B458006BB290 /* AppDelegate.m in Sources */,
+				DF25FF102418909300F94723 /* SFHFKeychainUtils.m in Sources */,
 				DF18F76C240758C6009112E7 /* ChineseToPinyinResource.m in Sources */,
 				DFCD425223D0B525006BB290 /* BaseViewController.m in Sources */,
 				DFEDC73123FD78FE00E30374 /* XYHPhotoDeatilVC.m in Sources */,
@@ -876,7 +886,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PWS9UN7U8;
-				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
+				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/pohtoshare/pohtoshare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -898,7 +908,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PWS9UN7U8;
-				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/PhotoShare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
+				GCC_PREFIX_HEADER = /Users/yuhangxi/Desktop/pohtoshare/pohtoshare/PhotoShare/PhotoShare/Other/PhotoShare.pch;
 				INFOPLIST_FILE = PhotoShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

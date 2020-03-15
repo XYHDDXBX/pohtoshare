@@ -15,6 +15,7 @@
 #import "XYHFMDBTool.h"
 #import "XYHPhotoDeatilVC.h"
 #import "XYHRefresh.h"
+#import "XYHImage.h"
 @interface XYHSquareVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView  *tableview;
@@ -63,7 +64,7 @@ static NSString *ID = @"cell";
     NSArray *photolisrArray = [XYHFMDBTool photoListWithSQL:@"select * from t_photolist"];
     if(photolisrArray.count){
         self.photolistArray = (NSMutableArray *)photolisrArray;
-        [self.tableview reloadData];
+//        [self.tableview reloadData];
     }else{
         [self loadPhotolist];
         
@@ -170,11 +171,27 @@ static NSString *ID = @"cell";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     SquareCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[SquareCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    cell.photolistModel = self.photolistArray[indexPath.row];
+    photolistModel *photolistModel = self.photolistArray[indexPath.row];
+    cell.photolistModel = photolistModel;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (photolistModel.favorite == 1 && cell.imageView.tag == photolistModel.imageUrl.intValue) {
+        UIImage *image = [XYHImage Base64StrToUIImage:photolistModel.imageUrl];
+        cell.photoImageView.image = image;
+//        [self.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }else{
+        //异步下载图片
+        [[NSOperationQueue new] addOperationWithBlock:^{
+            NSData *imagedata = [NSData dataWithContentsOfURL:[NSURL URLWithString:photolistModel.imageUrl]];
+            //主线程刷新UI
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                if (imagedata&& cell.imageView.tag == photolistModel.imageUrl.intValue) {
+                    cell.photoImageView.image = [UIImage imageWithData:imagedata];
+                }else if(cell.imageView.tag == photolistModel.imageUrl.intValue){
+                    cell.photoImageView.image = [UIImage imageNamed:@"pho-3"];
+                }
+            }];
+        }];
+    }
     return cell;
 }
 

@@ -10,10 +10,10 @@
 
 @implementation XYHUserModel
 
--(instancetype)initWithEmail:(NSString *)email password:(NSString *)password state:(BOOL )state username:(NSString *)username iconImage:(NSString *)iconimage{
+-(instancetype)initWithEmail:(NSString *)email state:(BOOL )state username:(NSString *)username iconImage:(NSString *)iconimage{
     if (self = [super init]) {
         self.email = email;
-        self.password = password;
+//        self.password = password;
         self.state = NO;
         self.username = username;
         self.iconImage = iconimage;
@@ -21,8 +21,8 @@
     return self;
 }
 
-+(instancetype)modelWithEmail:(NSString *)email password:(NSString *)password state:(BOOL )state username:(NSString *)username iconImage:(NSString *)iconimage{
-    return [[self alloc] initWithEmail:email password:password state:state username:username iconImage:iconimage];
++(instancetype)modelWithEmail:(NSString *)email state:(BOOL )state username:(NSString *)username iconImage:(NSString *)iconimage{
+    return [[self alloc] initWithEmail:email state:state username:username iconImage:iconimage];
 }
 
 @end

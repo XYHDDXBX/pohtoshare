@@ -167,8 +167,8 @@
                NSDictionary *dict1=self.userM.mj_keyValues;
                NSData *data=[NSKeyedArchiver  archivedDataWithRootObject:dict1];
                [XYHFMDBTool updateWithUserstate:data OriginalState:oriData];
+               self.nameLabel.text = newName;
                [self dismissViewControllerAnimated:YES completion:^{
-                   self.nameLabel.text = nil;
                    [self.setTablevView reloadData];
                }];
            }];

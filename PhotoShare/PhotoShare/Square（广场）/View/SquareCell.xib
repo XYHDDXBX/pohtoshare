@@ -83,7 +83,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="bgView" destination="M5Z-dX-d7w" id="3DW-OL-uK4"/>
-                <outlet property="photoImageView" destination="gy1-yB-XfT" id="XyI-bY-PbE"/>
+                <outlet property="photoImageView" destination="gy1-yB-XfT" id="1kd-Ti-sJW"/>
                 <outlet property="photoNo" destination="prm-ds-tT8" id="55b-72-dn8"/>
                 <outlet property="province" destination="S0L-tO-fvs" id="CFB-EM-QcA"/>
                 <outlet property="title" destination="igk-LT-4qD" id="Ts6-CP-PZk"/>

@@ -22,12 +22,12 @@
     [self.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:(102)/255.0 green:(124)/255.0 blue:(137)/255.0 alpha:(255)/255.0]] forBarMetrics:UIBarMetricsDefault];
 }
 
-+ (void)initialize
-{
-    // 获取当前类下面的UIBarButtonItem
-    UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self,nil];
-    
-}
+//+ (void)initialize
+//{
+//    // 获取当前类下面的UIBarButtonItem
+//    UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self,nil];
+//
+//}
 
 //进入二级控制器的时候隐藏tabbar同时设置返回navgationbar的左右按钮
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
